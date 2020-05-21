@@ -8,5 +8,25 @@
 <body>
     <a href="/" alt="back to main page"> go back</a>
     <h1><%= title %></h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i = 0; i< data.length; i++)  {%>
+                <tr>
+                    <td><%= data[i].id %></td>
+                    <td><%= data[i].name %></td>
+                    <td><%= data[i].age %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    
 </body>
 </html>
