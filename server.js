@@ -1,10 +1,15 @@
 // load the things we need
-var express = require('express');
-var app = express();
+const express = require('express');
+const routes = require('./routes');
+const app = express();
+const PORT = 8080;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
+app.get('/', routes.index);
+app.get('/list', routes.list);
 
-
-app.listen(8080);
-console.log('open http://localhost:8080 and see the magic');
+app.listen(PORT, () => {
+    console.log('Server is listening port on ' + PORT);
+    console.log(`Open http://localhost:${PORT} and see the magic`);
+});
