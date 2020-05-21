@@ -11,6 +11,17 @@ function mapIndexedItem(_item, index) {
     }
 }
 
-module.exports = function getRandowList(size) {
+function getRandowList(size) {
     return Array.from(Array(size)).map(mapIndexedItem);
+}
+
+module.exports = function(size, callback) {
+    const list = getRandowList(size);
+
+    //simulate a database connection
+    setTimeout(() => {
+        console.log('[list]');
+        console.log(list);
+        callback(list);
+    }, 1000);
 }
