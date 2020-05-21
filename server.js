@@ -6,8 +6,7 @@ const PORT = 8080;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
-app.get('/', routes.index);
-app.get('/list', routes.list);
+app.use('/', routes);
 
 app.listen(PORT, () => {
     console.log('Server is listening port on ' + PORT);
