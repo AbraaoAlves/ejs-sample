@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/list', (req, res, next) => {
-    res.render('list', {title: 'nothinf to see here yet'});
+    res.render('list', {title: 'nothing to see here yet'});
 });
 
 
